@@ -234,8 +234,7 @@ function Pool(maxSize) {
 function Background() {
 
     this.draw = () => {
-        // this.y += game.level;
-        this.y += 7;
+        this.y += game.level;
         this.context.drawImage(imageRepository.background, this.x, this.y);
         // Draw another image at the top edge of the first image
         this.context.drawImage(imageRepository.background, this.x, this.y - this.canvasHeight);
