@@ -1,0 +1,71 @@
+@font-face {
+    font-family: emulogic;
+    src: url(../fonts/emulogic.ttf);
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: emulogic;
+    color: #fff;
+    //background: url("../img/bg.png") no-repeat center;
+    //background-size: cover;
+    background-color: lighten(black, 10%);
+}
+
+canvas {
+    position: absolute;
+    left: calc(60% - 320px);
+    top: calc(50% - 240px);
+    border-radius: 20px;
+
+    #background {
+        z-index: -2;
+    }
+
+    #main {
+        z-index: -1;
+    }
+
+    #ship {
+        z-index: 0;
+    }
+}
+
+.info{
+    .score{
+        span{
+            color: red;
+        }
+    }
+    .level{
+        span{
+            color: gold;
+        }
+    }
+}
+
+.game-over {
+    @extend canvas;
+    width: 640px;
+    height: 480px;
+    display: none;
+    font-size: 30px;
+    p {
+        box-sizing: border-box;
+        text-align: center;
+        margin-bottom: 30px;
+        &:first-child {
+            margin-top: 172px;
+        }
+        span {
+            cursor: pointer;
+            &:hover {
+                color: #ccc;
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simple-game</title>
+    <link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body>
+
+    <canvas id="background" width="640" height="480"></canvas>
+    <canvas id="main" width="640" height="480"></canvas>
+    <canvas id="ship" width="640" height="480"></canvas>
+
+    <div class="controls">
+        <p>CONTROLS: SPACE & ARROWS</p>
+    </div>
+
+    <div class="info">
+        <p class="score">
+            SCORE: <span id="score"></span>
+        </p>
+        <p class="level">
+            LEVEL: <span id="lvl"></span>
+        </p>
+    </div>
+
+    <div id="lives" class="lives">
+        <img src="img/live.png" alt=""/>
+        <img src="img/live.png" alt=""/>
+        <img src="img/live.png" alt=""/>
+    </div>
+
+    <div class="game-over" id="game-over">
+        <p>GAME OVER</p>
+        <p>
+            PRESS R TO <span onclick="game.restart()">RESTART</span>
+        </p>
+    </div>
+<script src="js/resources.js"></script>
+<script src="js/keys.js"></script>
+<script src="js/functions.js"></script>
+<script src="js/classes.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
